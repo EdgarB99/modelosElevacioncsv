@@ -4,8 +4,8 @@ import time
 import os
 
 # Ruta al archivo CSV
-archivo_csv = '/home/edgarblas/Desktop/mdschido.csv'
-carpeta_descargas = '/home/edgarblas/Desktop/mdsDownload/'
+archivo_csv = '/home/edgarblas/Desktop/mdt_01.csv'
+carpeta_descargas = '/home/edgarblas/Desktop/mdtDownload/'
 resultados = []
 
 with open(archivo_csv, 'r', newline='') as archivo:
@@ -47,7 +47,7 @@ with open(archivo_csv, 'r', newline='') as archivo:
         contador += 1
 
         # Realizar la solicitud GET para descargar el archivo solo a partir de la vuelta 35
-        if contador >= 35:
+        if contador >= 357:
             response = requests.get(url_descarga)  # Aquí se utiliza la variable url_descarga
 
             # Verificar si la solicitud fue exitosa (código de estado 200)

@@ -11,7 +11,7 @@ headers = {
     'Accept-Language': 'es-419,es;q=0.9,en;q=0.8',
     'Connection': 'keep-alive',
     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-    'Cookie': 'JSESSIONID=0E63A91321F3D2EFABC04046B099AD3B; _ga_SBVWFG0RDV=GS1.1.1711666278.3.1.1711668534.0.0.0; _ga=GA1.3.1132650150.1711653752; _gid=GA1.3.1925182207.1711653755; BIGipServerLB_app_geo2=1745000714.38175.0000; BIGipServerLB_contenidos2=1164235274.37407.0000; BIGipServerLB_NuevoPortal=990550282.20480.0000; _gat=1',
+    'Cookie': 'JSESSIONID=C48C9F14A0C36E2EB6CFEBAF42B09984; _ga_SBVWFG0RDV=GS1.1.1711987982.7.1.1711988004.0.0.0; _ga=GA1.3.1132650150.1711653752; BIGipServerLB_app_geo2=1745000714.38175.0000; BIGipServerLB_NuevoPortal=1208129802.20480.0000; _gid=GA1.3.1249357084.1711987983; _gat=1; BIGipServerLB_contenidos2=1191352586.37407.0000',
     'Origin': 'https://www.inegi.org.mx',
     'Referer': 'https://www.inegi.org.mx/app/geo2/elevacionesmex/',
     'Sec-Fetch-Dest': 'empty',
@@ -27,8 +27,8 @@ headers = {
 # Datos que se enviarán en la solicitud
 data = {
     'res': '5',
-    'mod': 'S',
-    'cve': 'E14A32B1'
+    'mod': 'T',
+    'cve': 'E14A23E1'
 }
 # Realiza la solicitud POST utilizando requests
 response = requests.post(url, data=data, headers=headers)

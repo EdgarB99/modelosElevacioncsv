@@ -14,7 +14,7 @@ headers = {
     'Accept-Language': 'es-419,es;q=0.9,en;q=0.8',
     'Connection': 'keep-alive',
     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-    'Cookie': 'JSESSIONID=7948273F519F8C795D5893853B821436; _ga_SBVWFG0RDV=GS1.1.1711729944.5.1.1711729973.0.0.0; _ga=GA1.3.1132650150.1711653752; _gid=GA1.3.1925182207.1711653755; BIGipServerLB_app_geo2=1745000714.37919.0000; BIGipServerLB_NuevoPortal=1208129802.20480.0000; _gat=1; BIGipServerLB_contenidos2=1191352586.37407.0000',
+    'Cookie': 'JSESSIONID=C48C9F14A0C36E2EB6CFEBAF42B09984; _ga_SBVWFG0RDV=GS1.1.1711987982.7.1.1711988696.0.0.0; _ga=GA1.3.1132650150.1711653752; BIGipServerLB_app_geo2=1745000714.38175.0000; BIGipServerLB_NuevoPortal=1208129802.20480.0000; _gid=GA1.3.1249357084.1711987983; BIGipServerLB_contenidos2=1191352586.37407.0000; _gat=1',
     'Origin': 'https://www.inegi.org.mx',
     'Referer': 'https://www.inegi.org.mx/app/geo2/elevacionesmex/',
     'Sec-Fetch-Dest': 'empty',
@@ -62,29 +62,29 @@ with open(archivo_csv, 'r', newline='') as archivo:
         # Iterar sobre cada elemento
         if len(data) == 2:
             # Verificar si "_as.zip" está en el archivo
-            if '_as.zip' in data[1]['archivo']:
-                data[1]['url_descarga'] += '_as.zip'
+            if '_as.zip' in data[0]['archivo']:
+                data[0]['url_descarga'] += '_as.zip'
             # Si no, verificar "_gr.zip"
-            elif '_gr.zip' in data[1]['archivo']:
-                data[1]['url_descarga'] += '_gr.zip'
+            elif '_gr.zip' in data[0]['archivo']:
+                data[0]['url_descarga'] += '_gr.zip'
             # Si no, agregar "_b.zip"
             else:
-                data[1]['url_descarga'] += '_b.zip'
+                data[0]['url_descarga'] += '_b.zip'
 
-            resultados.append(data[1])
+            resultados.append(data[0])
             # Mostrar el resultado modificado
             print(json.dumps(data, indent=4))
         # Iterar sobre cada elemento
         elif len(data) == 3:
             # Verificar si "_as.zip" está en el archivo
-            if '_as.zip' in data[2]['archivo']:
-                data[2]['url_descarga'] += '_as.zip'
+            if '_as.zip' in data[0]['archivo']:
+                data[0]['url_descarga'] += '_as.zip'
             # Si no, verificar "_gr.zip"
-            elif '_gr.zip' in data[2]['archivo']:
-                data[2]['url_descarga'] += '_gr.zip'
+            elif '_gr.zip' in data[0]['archivo']:
+                data[0]['url_descarga'] += '_gr.zip'
             # Si no, agregar "_b.zip"
             else:
-                data[2]['url_descarga'] += '_b.zip'
+                data[0]['url_descarga'] += '_b.zip'
 
             resultados.append(data[2])
             # Mostrar el resultado modificado
@@ -114,7 +114,7 @@ print('resultados',resultados)
 headers = resultados[0].keys()
 
 # Especificar el nombre del archivo CSV
-csv_filename = '/home/edgarblas/Desktop/mdt.csv'
+csv_filename = '/home/edgarblas/Desktop/mdt_01.csv'
 
 # Escribir los datos en el archivo CSV
 with open(csv_filename, 'w', newline='') as csvfile:
